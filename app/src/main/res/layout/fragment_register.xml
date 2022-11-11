@@ -47,11 +47,10 @@
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/rgOption"
-        android:gravity="center"
+        android:gravity="left"
         app:layout_constraintTop_toBottomOf="@id/etPhNumber"
         app:layout_constraintStart_toStartOf="@id/etPhNumber"
-        app:layout_constraintEnd_toEndOf="@id/etPhNumber"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <RadioButton android:id="@+id/radio_NGO"
