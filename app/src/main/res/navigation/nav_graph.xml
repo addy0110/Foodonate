@@ -40,5 +40,23 @@
         <action
             android:id="@+id/action_registerFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_chooseImageFragment"
+            app:destination="@id/chooseImageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/restaurantHomeFragment"
+        android:name="com.example.foodonate.fragment.RestaurantHomeFragment"
+        android:label="fragment_restaurant_home"
+        tools:layout="@layout/fragment_restaurant_home" />
+    <fragment
+        android:id="@+id/ngoHomeFragment"
+        android:name="com.example.foodonate.fragment.NgoHomeFragment"
+        android:label="fragment_ngo_home"
+        tools:layout="@layout/fragment_ngo_home" />
+    <fragment
+        android:id="@+id/chooseImageFragment"
+        android:name="com.example.foodonate.fragment.ChooseImageFragment"
+        android:label="fragment_choose_image"
+        tools:layout="@layout/fragment_choose_image" />
 </navigation>

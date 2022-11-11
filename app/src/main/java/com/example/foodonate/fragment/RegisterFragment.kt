@@ -1,4 +1,4 @@
-package com.example.foodonate
+package com.example.foodonate.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.Toast
+import androidx.navigation.findNavController
+import com.example.foodonate.R
 import com.example.foodonate.databinding.FragmentRegisterBinding
 import com.example.foodonate.model.UserModel
 import com.google.firebase.auth.FirebaseAuth
@@ -55,6 +57,7 @@ class RegisterFragment : Fragment() {
             try {
                 auth.createUserWithEmailAndPassword(email, password).await()
                 addUser(name, phoneNumber, radio)
+                view?.findNavController()?.navigate(R.id.action_registerFragment_to_chooseImageFragment)
             }catch (e : Exception){
                 withContext(Dispatchers.Main){
                     Toast.makeText(context,e.message, Toast.LENGTH_LONG).show()

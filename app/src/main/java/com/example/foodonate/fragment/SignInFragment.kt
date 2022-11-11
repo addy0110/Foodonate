@@ -1,4 +1,4 @@
-package com.example.foodonate
+package com.example.foodonate.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.findNavController
+import com.example.foodonate.R
 import com.example.foodonate.databinding.FragmentSignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
