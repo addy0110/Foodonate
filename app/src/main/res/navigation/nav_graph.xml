@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/intro1Fragment"
-        android:name="com.example.foodonate.Intro1Fragment"
+        android:name="com.example.foodonate.fragment.Intro1Fragment"
         android:label="fragment_intro1"
         tools:layout="@layout/fragment_intro1" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/intro2Fragment"
-        android:name="com.example.foodonate.Intro2Fragment"
+        android:name="com.example.foodonate.fragment.Intro2Fragment"
         android:label="fragment_intro2"
         tools:layout="@layout/fragment_intro2" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.foodonate.SignInFragment"
+        android:name="com.example.foodonate.fragment.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.foodonate.RegisterFragment"
+        android:name="com.example.foodonate.fragment.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action

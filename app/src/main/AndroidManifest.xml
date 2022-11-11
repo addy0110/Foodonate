@@ -9,8 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodonate">
         <activity
-            android:name=".Splash"
-            android:exported="true" >
+            android:name=".activity.Splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +18,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:name=".activity.MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
