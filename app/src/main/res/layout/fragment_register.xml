@@ -45,6 +45,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etName" />
 
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rgOption"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/etPhNumber"
+        app:layout_constraintStart_toStartOf="@id/etPhNumber"
+        app:layout_constraintEnd_toEndOf="@id/etPhNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_NGO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NGO"/>
+        <RadioButton android:id="@+id/radio_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant"/>
+    </RadioGroup>
 
     <EditText
         android:id="@+id/etEmailId"
@@ -58,7 +76,7 @@
         android:paddingVertical="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPhNumber" />
+        app:layout_constraintTop_toBottomOf="@id/rgOption" />
 
     <EditText
         android:id="@+id/etPassword"
