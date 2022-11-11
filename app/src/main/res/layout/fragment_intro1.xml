@@ -1,55 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment.Intro1Fragment"
-    android:background="@color/backgroundColour">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/intro1img"
-        android:layout_width="360dp"
-        android:layout_height="240dp"
-        android:src="@drawable/ic_intro1vector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColour"
+        tools:context=".fragment.Intro1Fragment">
 
-    <TextView
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="You have two hands one to help yourself, the second to help others."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/intro1img" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/intro1img"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            android:src="@drawable/ic_intro1vector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/intro1bt"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/ic_ellipse"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="32dp">
-    </Button>
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="You have two hands one to help yourself, the second to help others."
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro1img" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow"
-        app:layout_constraintStart_toStartOf="@id/intro1bt"
-        app:layout_constraintEnd_toEndOf="@id/intro1bt"
-        app:layout_constraintTop_toTopOf="@id/intro1bt"
-        app:layout_constraintBottom_toBottomOf="@id/intro1bt"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/intro1bt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/ic_ellipse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></Button>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/intro1bt"
+            app:layout_constraintEnd_toEndOf="@id/intro1bt"
+            app:layout_constraintStart_toStartOf="@id/intro1bt"
+            app:layout_constraintTop_toTopOf="@id/intro1bt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

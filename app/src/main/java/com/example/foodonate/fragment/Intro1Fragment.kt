@@ -15,8 +15,8 @@ class Intro1Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentIntro1Binding.inflate(layoutInflater,container,false)
-        binding.intro1bt.setOnClickListener{
+        binding = FragmentIntro1Binding.inflate(layoutInflater, container, false)
+        binding.intro1bt.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_intro1Fragment_to_intro2Fragment)
         }
         return binding.root

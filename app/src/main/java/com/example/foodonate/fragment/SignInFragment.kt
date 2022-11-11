@@ -16,8 +16,8 @@ class SignInFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentSignInBinding.inflate(layoutInflater,container,false)
-        binding.singUpBt.setOnClickListener{
+        binding = FragmentSignInBinding.inflate(layoutInflater, container, false)
+        binding.singUpBt.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_signInFragment_to_registerFragment)
         }
         return binding.root
