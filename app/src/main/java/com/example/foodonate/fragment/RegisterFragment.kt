@@ -1,4 +1,4 @@
-package com.example.foodonate
+package com.example.foodonate.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

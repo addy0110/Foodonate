@@ -5,7 +5,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Intro1Fragment"
+    tools:context=".fragment.Intro1Fragment"
     android:background="@color/backgroundColour">
 
     <com.google.android.material.imageview.ShapeableImageView
