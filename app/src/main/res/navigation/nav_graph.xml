@@ -112,6 +112,16 @@
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" >
     </fragment>
+
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.example.foodonate.fragment.ConfirmRequestFragment"
+        android:label="fragment_confirm_request"
+        tools:layout="@layout/fragment_confirm_request" />
+    <action
+        android:id="@+id/action_confirmFragment_to_restaurantHome"
+        app:destination="@id/restaurantHomeFragment" />
+
     <fragment
         android:id="@+id/makeDonationFragment"
         android:name="com.example.foodonate.MakeDonationFragment"
