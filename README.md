@@ -13,12 +13,23 @@
 
 <br />
 # Screenshots of our App
+
 <p>
 <img src="ReadmeImages/START 01.png" width="100"> <img src="ReadmeImages/START 03.png" width="100">
 <img src="ReadmeImages/START 04.png" width="100"> <img src="ReadmeImages/Login page.png" width="100">
 <img src="ReadmeImages/Sign Up 1.png" width="100">
 </p>
 
+<p>
+<img src="ReadmeImages/Restaurant login.png" width="100"> <img src="ReadmeImages/Component.png" width="100">
+<img src="ReadmeImages/Your Donations.png" width="100"> <img src="ReadmeImages/Available Donations.png" width="100">
+<img src="ReadmeImages/Confirm Requests.png" width="100">
+</p>
+
+<p>
+<img src="ReadmeImages/NGO login.png" width="100"> <img src="ReadmeImages/New Donation 2.png" width="100">
+<img src="ReadmeImages/Your Request.png" width="100"> <img src="ReadmeImages/Profile.jpg" width="100">
+</p>
 
 # Features
 
