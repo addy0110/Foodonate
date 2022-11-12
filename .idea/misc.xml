@@ -12,9 +12,14 @@
         <entry key="..\:/Foodonate/app/src/main/res/drawable/ic_linevector.xml" value="0.21" />
         <entry key="..\:/Foodonate/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Foodonate/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_about.xml" value="0.25416666666666665" />
+        <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_choose_image.xml" value="0.25416666666666665" />
+        <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_intro1.xml" value="0.25416666666666665" />
         <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_intro2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_ngo_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_restaurant_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/Foodonate/app/src/main/res/layout/fragment_user_profile.xml" value="0.264" />
         <entry key="..\:/Users/pande/Desktop/My Android Projects/Foodonate/app/src/main/res/drawable/edittext_rounded_corner.xml" value="0.14635416666666667" />
