@@ -68,6 +68,9 @@
         <action
             android:id="@+id/action_restaurantHomeFragment_to_makeDonationFragment"
             app:destination="@id/makeDonationFragment" />
+        <action
+            android:id="@+id/action_restaurantHomeFragment_to_profileFragment"
+            app:destination="@id/userProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/ngoHomeFragment"
@@ -80,6 +83,9 @@
         <action
             android:id="@+id/action_ngoHomeFragment_to_donationRequestFragment"
             app:destination="@id/donationRequestFragment" />
+        <action
+            android:id="@+id/action_ngoHomeFragment_to_profileFragment"
+            app:destination="@id/userProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/chooseImageFragment"
