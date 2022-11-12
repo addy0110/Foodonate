@@ -59,16 +59,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/profileImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_marginTop="40dp"
-            android:background="@color/white"
-            android:scaleType="centerCrop"
+            android:background="@drawable/ic_circle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profile" />
+            app:layout_constraintTop_toBottomOf="@id/profile"/>
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/profileImageView"-->
+        <!--            android:layout_width="120dp"-->
+        <!--            android:layout_height="120dp"-->
+        <!--            android:layout_marginTop="40dp"-->
+        <!--            android:background="@color/white"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/profile" />-->
 
         <TextView
             android:id="@+id/profileName"
