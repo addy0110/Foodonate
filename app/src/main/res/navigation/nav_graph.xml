@@ -103,6 +103,9 @@
         android:name="com.example.foodonate.fragment.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
+    <action
+        android:id="@+id/action_editFragment_to_profileFragment"
+        app:destination="@id/userProfileFragment" />
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.foodonate.fragment.AboutFragment"
