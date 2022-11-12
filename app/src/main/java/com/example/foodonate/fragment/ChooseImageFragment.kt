@@ -11,12 +11,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.foodonate.R
 import com.example.foodonate.databinding.FragmentChooseImageBinding
+import com.example.foodonate.model.UserModel
+import com.example.foodonate.viewModel.firebaseViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.auth.User
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,7 +31,9 @@ class ChooseImageFragment : Fragment() {
     lateinit var binding: FragmentChooseImageBinding
     lateinit var auth: FirebaseAuth
     lateinit var imageUri: Uri
-
+    lateinit var viewModel : firebaseViewModel
+    private var storageReference = Firebase.storage.reference
+    private var imageUrl : String = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,8 +41,9 @@ class ChooseImageFragment : Fragment() {
         // Inflate the layout for this fragment
 
         binding = FragmentChooseImageBinding.inflate(layoutInflater,container,false)
-
+        viewModel = ViewModelProvider(this)[firebaseViewModel::class.java]
         auth = FirebaseAuth.getInstance()
+
         binding.ivImage.setOnClickListener {
             val builder = AlertDialog.Builder(requireContext())
             builder.setTitle("Update Profile Picture?")
@@ -51,6 +59,9 @@ class ChooseImageFragment : Fragment() {
             alertDialog.setCancelable(false)
             alertDialog.show()
         }
+        binding.submitBt.setOnClickListener {
+            viewModel.UpdateUserImage(imageUrl)
+        }
         return binding.root
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -58,8 +69,28 @@ class ChooseImageFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == 100) {
             imageUri = data?.data!!
-
+            binding.submitBt.visibility = View.GONE
+            binding.progressBar.visibility = View.VISIBLE
             Glide.with(this).load(imageUri).into(binding.ivImage)
-        }
-    }
+            if(imageUri != null){
+            try {
+                storageReference.child("${auth?.currentUser?.uid}/ProfilePic").putFile(imageUri)
+                    .addOnSuccessListener {
+                        storageReference
+                            .child("${auth.currentUser?.uid}/ProfilePic")
+                            .downloadUrl.addOnSuccessListener {
+                                imageUrl = it.toString()
+                                binding.progressBar.visibility = View.GONE
+                                binding.submitBt.visibility = View.VISIBLE
+                            }.addOnFailureListener{
+                                Log.e("@@ChooseImageFragmentii","Error",it)
+                            }
+                    }.addOnFailureListener{
+                        Log.e("@@ChooseImageFragment","Error",it)
+                    }
+            }catch (e: Exception){
+                    Log.e("@@ChooseImageFragment", "Error", e)
+
+                }
+            }}}
 }
