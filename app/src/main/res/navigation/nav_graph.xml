@@ -56,6 +56,7 @@
             android:id="@+id/action_registerFragment_to_chooseImageFragment"
             app:destination="@id/chooseImageFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/restaurantHomeFragment"
         android:name="com.example.foodonate.fragment.RestaurantHomeFragment"
@@ -78,6 +79,28 @@
         android:id="@+id/chooseImageFragment"
         android:name="com.example.foodonate.fragment.ChooseImageFragment"
         android:label="fragment_choose_image"
+        tools:layout="@layout/fragment_choose_image" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.foodonate.fragment.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <action
+        android:id="@+id/action_profileFragment_to_editFragment"
+        app:destination="@id/editFragment" />
+    <action
+        android:id="@+id/action_profileFragment_to_aboutFragment"
+        app:destination="@id/aboutFragment" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.foodonate.fragment.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.foodonate.fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
         tools:layout="@layout/fragment_choose_image" >
         <action
             android:id="@+id/action_chooseImageFragment_to_restaurantHomeFragment"
