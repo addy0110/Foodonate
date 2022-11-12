@@ -41,4 +41,5 @@
             android:id="@+id/action_registerFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
     </fragment>
+    
 </navigation>
