@@ -11,8 +11,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.foodonate.R
 import com.example.foodonate.databinding.FragmentChooseImageBinding
@@ -25,10 +27,12 @@ import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
 
 class ChooseImageFragment : Fragment() {
 
-    lateinit var binding: FragmentChooseImageBinding
+    lateinit var binding: com.example.foodonate.databinding.FragmentChooseImageBinding
     lateinit var auth: FirebaseAuth
     lateinit var imageUri: Uri
     lateinit var viewModel : firebaseViewModel
@@ -60,7 +64,21 @@ class ChooseImageFragment : Fragment() {
             alertDialog.show()
         }
         binding.submitBt.setOnClickListener {
-            viewModel.UpdateUserImage(imageUrl)
+            viewModel.UpdateUserImage(imageUrl).invokeOnCompletion {
+                viewModel.getCurrentUser()
+                viewModel.user().observe(viewLifecycleOwner, Observer {
+                    if(it.radio == "NGO"){
+                        val action = ChooseImageFragmentDirections.actionChooseImageFragmentToNgoHomeFragment(viewModel.user)
+                        findNavController().navigate(action)
+                    }
+                    else if(it.radio == "Restaurant"){
+                        val action = ChooseImageFragmentDirections.actionChooseImageFragmentToRestaurantHomeFragment(viewModel.user)
+                        findNavController().navigate(action)
+                    }
+                })
+            }
+
+
         }
         return binding.root
     }
@@ -93,4 +111,5 @@ class ChooseImageFragment : Fragment() {
 
                 }
             }}}
+
 }
