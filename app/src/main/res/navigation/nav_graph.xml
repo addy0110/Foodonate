@@ -132,7 +132,11 @@
         android:id="@+id/makeDonationFragment"
         android:name="com.example.foodonate.MakeDonationFragment"
         android:label="fragment_make_donation"
-        tools:layout="@layout/fragment_make_donation" />
+        tools:layout="@layout/fragment_make_donation" >
+        <action
+            android:id="@+id/action_makeDonationFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/donationRequestFragment"
         android:name="com.example.foodonate.DonationRequestFragment"
