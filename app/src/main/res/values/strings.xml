@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Foodonate</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_descripton">Due to swift changes in habits and lifestyle due to the high standard of living, food is being wasted. We may put them to good use by giving them to charities like old age homes and orphans so they won\'t go to waste. We have developed an Android mobile application that enables food donors, restaurants, and individuals to give and share their leftovers with people in need after identifying the utility of mobile technology to reduce food waste management. Developers, donors, delivery organizations, and receivers will be our main stakeholders. In the portion of our application dedicated to our generous donors, we are also honoring those who have given a significant amount of their time. An Android application with features for receiving and accepting food donations. It creates a direct line of communication between the parties and offers convenient delivery services.</string>
 </resources>

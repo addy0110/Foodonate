@@ -103,16 +103,23 @@
         android:name="com.example.foodonate.fragment.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
+    <action
+        android:id="@+id/action_editFragment_to_profileFragment"
+        app:destination="@id/userProfileFragment" />
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.foodonate.fragment.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" >
-        <action
-            android:id="@+id/action_chooseImageFragment_to_restaurantHomeFragment"
-            app:destination="@id/restaurantHomeFragment" />
-        <action
-            android:id="@+id/action_chooseImageFragment_to_ngoHomeFragment"
-            app:destination="@id/ngoHomeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/makeDonationFragment"
+        android:name="com.example.foodonate.MakeDonationFragment"
+        android:label="fragment_make_donation"
+        tools:layout="@layout/fragment_make_donation" />
+    <fragment
+        android:id="@+id/donationRequestFragment"
+        android:name="com.example.foodonate.DonationRequestFragment"
+        android:label="fragment_donation_request"
+        tools:layout="@layout/fragment_donation_request" />
 </navigation>

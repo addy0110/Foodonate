@@ -29,4 +29,5 @@ class UserProfileFragment : Fragment() {
         }
         return binding.root
     }
+
 }

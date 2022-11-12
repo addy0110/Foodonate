@@ -77,7 +77,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@color/white"
-                    android:src="@android:drawable/ic_menu_edit"/>
+                    android:src="@android:drawable/ic_menu_edit" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -92,17 +92,17 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/openAboutPage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:background="@color/teal_200"
-                android:id="@+id/openAboutPage">
+                android:background="@color/teal_200">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@color/white"
-                    android:src="@android:drawable/star_off"/>
+                    android:src="@android:drawable/star_off" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -117,17 +117,17 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/LogOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:background="@color/teal_200"
-                android:id="@+id/LogOut">
+                android:background="@color/teal_200">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@color/white"
-                    android:src="@android:drawable/ic_menu_revert"/>
+                    android:src="@android:drawable/ic_menu_revert" />
 
                 <TextView
                     android:layout_width="match_parent"
