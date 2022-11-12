@@ -44,6 +44,9 @@
             android:id="@+id/action_registerFragment_to_chooseImageFragment"
             app:destination="@id/chooseImageFragment" />
     </fragment>
+<<<<<<< HEAD
+    
+=======
     <fragment
         android:id="@+id/restaurantHomeFragment"
         android:name="com.example.foodonate.fragment.RestaurantHomeFragment"
@@ -59,4 +62,5 @@
         android:name="com.example.foodonate.fragment.ChooseImageFragment"
         android:label="fragment_choose_image"
         tools:layout="@layout/fragment_choose_image" />
+>>>>>>> 150a46a743544c7e9f6d0130b09ca50e3dd261ec
 </navigation>
