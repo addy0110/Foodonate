@@ -32,7 +32,7 @@ import kotlinx.coroutines.withContext
 
 class ChooseImageFragment : Fragment() {
 
-    lateinit var binding: FragmentChooseImageBinding
+    lateinit var binding: com.example.foodonate.databinding.FragmentChooseImageBinding
     lateinit var auth: FirebaseAuth
     lateinit var imageUri: Uri
     lateinit var viewModel : firebaseViewModel
