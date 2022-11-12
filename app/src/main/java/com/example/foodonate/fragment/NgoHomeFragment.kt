@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.foodonate.R
@@ -27,6 +28,10 @@ class NgoHomeFragment : Fragment() {
         val user = args.user
         binding.tvWelcomeNgoName.text = user.name
         Glide.with(requireContext()).load(user.profileUrl).into(binding.ivNgo)
+
+        binding.btReqDonation.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.action_restaurantHomeFragment_to_makeDonationFragment)
+        }
         return binding.root
     }
 }
