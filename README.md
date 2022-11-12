@@ -2,16 +2,15 @@
 <br />
 <p align="center"> A Food donation app </p>
 
-<!-- <p align="center">
-<image src ="https://user-images.githubusercontent.com/97015594/154835846-368f83f1-acce-4ac8-a997-e12e9c53a129.jpeg" height="350">
-</p> -->
+<p align="center">
+<image src ="https://github.com/addy0110/Foodonate/blob/develop/ReadmeImages/icon.jpeg" height="200">
+</p>
 
 # Description
  
  <p>Foodonate is an android application that contains functionalities to donate food and receive or accept food. It establishes a direct link between the two parties including the donor which can be any authenticated individual and the service receiver which can be a needy individual, a volunteer wanting to provide food to the needy people in his/her society, any authorised NGO, an old-age home, etc with our application’s ease of delivery services. We are also honouring donors who have donated a considerable amount of time by highlighting and acknowledging them in the generous donors section of our application. An Android application containing functionalities to donate food and receive or accept food. It establishes a direct link between the two parties as well as provides the ease of delivery services.
 </p>
 
-<br />
 # Screenshots of our App
 
 <p>
