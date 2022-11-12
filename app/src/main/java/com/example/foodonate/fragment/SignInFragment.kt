@@ -45,6 +45,7 @@ class SignInFragment : Fragment() {
             try {
                 auth.signInWithEmailAndPassword(email, password).await()
                 Log.d("@@SignInFragment", "Sign")
+
             }catch (e : Exception){
                 withContext(Dispatchers.Main){
                     Toast.makeText(context,e.message, Toast.LENGTH_LONG).show()

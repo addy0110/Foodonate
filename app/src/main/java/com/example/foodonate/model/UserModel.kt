@@ -4,5 +4,6 @@ data class UserModel(
     val uid: String? = null,
     val name : String? = null,
     val phoneNumber : String? = null,
-    val radio : String? = null
+    val radio : String? = null,
+    var profileUrl : String? = null
     )

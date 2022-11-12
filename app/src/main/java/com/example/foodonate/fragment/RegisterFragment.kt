@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodonate.R
 import com.example.foodonate.databinding.FragmentRegisterBinding
 import com.example.foodonate.model.UserModel
+import com.example.foodonate.viewModel.firebaseViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -22,6 +24,7 @@ class RegisterFragment : Fragment() {
     lateinit var binding: FragmentRegisterBinding
     lateinit var auth : FirebaseAuth
     private var db = Firebase.firestore.collection("Users")
+    lateinit var viewModel : firebaseViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,6 +32,7 @@ class RegisterFragment : Fragment() {
         // Inflate the layout for this fragment
         auth = FirebaseAuth.getInstance()
         binding = FragmentRegisterBinding.inflate(layoutInflater,container,false)
+        viewModel = ViewModelProvider(this)[firebaseViewModel::class.java]
         binding.submitBt.setOnClickListener {
             val email = binding.etEmailId.text.toString()
             val password = binding.etPassword.text.toString()
@@ -57,6 +61,7 @@ class RegisterFragment : Fragment() {
             try {
                 auth.createUserWithEmailAndPassword(email, password).await()
                 addUser(name, phoneNumber, radio)
+
                 view?.findNavController()?.navigate(R.id.action_registerFragment_to_chooseImageFragment)
             }catch (e : Exception){
                 withContext(Dispatchers.Main){
@@ -69,6 +74,7 @@ class RegisterFragment : Fragment() {
         val newUser = UserModel(auth.uid,name, phoneNumber, radio)
         try {
             db.add(newUser).await()
+
         }catch (e : Exception){
             withContext(Dispatchers.Main){
                 Toast.makeText(context,e.message, Toast.LENGTH_LONG).show()
