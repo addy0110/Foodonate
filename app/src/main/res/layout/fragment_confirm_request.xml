@@ -59,7 +59,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        
+
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/profileImageView"
             android:layout_width="130dp"

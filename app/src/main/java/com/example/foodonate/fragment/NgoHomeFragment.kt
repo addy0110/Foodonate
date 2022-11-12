@@ -32,6 +32,11 @@ class NgoHomeFragment : Fragment() {
         binding.btReqDonation.setOnClickListener{
             view?.findNavController()?.navigate(R.id.action_restaurantHomeFragment_to_makeDonationFragment)
         }
+
+        binding.ivProfile.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.action_restaurantHomeFragment_to_profileFragment)
+        }
+
         return binding.root
     }
 }
