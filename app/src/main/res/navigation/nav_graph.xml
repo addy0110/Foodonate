@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/intro1Fragment">
+
+    <fragment
+        android:id="@+id/intro1Fragment"
+        android:name="com.example.foodonate.fragment.Intro1Fragment"
+        android:label="fragment_intro1"
+        tools:layout="@layout/fragment_intro1" >
+        <action
+            android:id="@+id/action_intro1Fragment_to_intro2Fragment"
+            app:destination="@id/intro2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intro2Fragment"
+        android:name="com.example.foodonate.fragment.Intro2Fragment"
+        android:label="fragment_intro2"
+        tools:layout="@layout/fragment_intro2" >
+        <action
+            android:id="@+id/action_intro2Fragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_intro2Fragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment" />
+        <action
+            android:id="@+id/action_intro2Fragment_to_ngoHomeFragment"
+            app:destination="@id/ngoHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.foodonate.fragment.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_ngoHomeFragment"
+            app:destination="@id/ngoHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.foodonate.fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_chooseImageFragment"
+            app:destination="@id/chooseImageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantHomeFragment"
+        android:name="com.example.foodonate.fragment.RestaurantHomeFragment"
+        android:label="fragment_restaurant_home"
+        tools:layout="@layout/fragment_restaurant_home" >
+        <argument
+            android:name="user"
+            app:argType="com.example.foodonate.model.UserModel" />
+        <action
+            android:id="@+id/action_restaurantHomeFragment_to_makeDonationFragment"
+            app:destination="@id/makeDonationFragment" />
+        <action
+            android:id="@+id/action_restaurantHomeFragment_to_profileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ngoHomeFragment"
+        android:name="com.example.foodonate.fragment.NgoHomeFragment"
+        android:label="fragment_ngo_home"
+        tools:layout="@layout/fragment_ngo_home" >
+        <argument
+            android:name="user"
+            app:argType="com.example.foodonate.model.UserModel" />
+        <action
+            android:id="@+id/action_ngoHomeFragment_to_donationRequestFragment"
+            app:destination="@id/donationRequestFragment" />
+        <action
+            android:id="@+id/action_ngoHomeFragment_to_profileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseImageFragment"
+        android:name="com.example.foodonate.fragment.ChooseImageFragment"
+        android:label="fragment_choose_image"
+        tools:layout="@layout/fragment_choose_image" >
+        <action
+            android:id="@+id/action_chooseImageFragment_to_ngoHomeFragment"
+            app:destination="@id/ngoHomeFragment" />
+        <action
+            android:id="@+id/action_chooseImageFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.foodonate.fragment.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <action
+        android:id="@+id/action_profileFragment_to_editFragment"
+        app:destination="@id/editFragment" />
+    <action
+        android:id="@+id/action_profileFragment_to_aboutFragment"
+        app:destination="@id/aboutFragment" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.foodonate.fragment.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <action
+        android:id="@+id/action_editFragment_to_profileFragment"
+        app:destination="@id/userProfileFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.foodonate.fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.example.foodonate.fragment.ConfirmRequestFragment"
+        android:label="fragment_confirm_request"
+        tools:layout="@layout/fragment_confirm_request" />
+    <action
+        android:id="@+id/action_confirmFragment_to_restaurantHome"
+        app:destination="@id/restaurantHomeFragment" />
+
+    <fragment
+        android:id="@+id/makeDonationFragment"
+        android:name="com.example.foodonate.MakeDonationFragment"
+        android:label="fragment_make_donation"
+        tools:layout="@layout/fragment_make_donation" >
+        <action
+            android:id="@+id/action_makeDonationFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/donationRequestFragment"
+        android:name="com.example.foodonate.DonationRequestFragment"
+        android:label="fragment_donation_request"
+        tools:layout="@layout/fragment_donation_request" />
+</navigation>

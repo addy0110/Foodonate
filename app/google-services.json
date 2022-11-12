@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1034479298607",
+    "project_id": "foodonate-396ac",
+    "storage_bucket": "foodonate-396ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034479298607:android:6f1c9b26d9f7f83fcffeda",
+        "android_client_info": {
+          "package_name": "com.example.foodonate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034479298607-84oup77j41ttr4j8b6ipdu52b43q9e23.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodonate",
+            "certificate_hash": "6a29bbc12e6710923e913bc42d27066f085d1549"
+          }
+        },
+        {
+          "client_id": "1034479298607-8tn5t2ig429ec2a3eg6ia07ioi805h25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfKusDYKDStrvmDZRDwjdpPLzWXJSNrgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034479298607-8tn5t2ig429ec2a3eg6ia07ioi805h25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
