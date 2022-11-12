@@ -28,7 +28,7 @@ class firebaseViewModel(application: Application) : AndroidViewModel(application
     fun user(): LiveData<UserModel> {
         return currentUser
     }
-    fun UpdateUserImage(imageUrl : String) = CoroutineScope(Dispatchers.IO).launch {
+   fun UpdateUserImage(imageUrl : String) = CoroutineScope(Dispatchers.IO).launch {
         Log.d("@@Inside","HERE ${imageUrl}")
         try {
             val personQuery = db
