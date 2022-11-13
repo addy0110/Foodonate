@@ -79,7 +79,7 @@ Addition of a more efficient model will increase the ability to detect fraud and
  
 # Team Members
 
- * [Adarsh Pandey](https://github.com/addy0110)
- * [Ananya Mishra](https://github.com/Anan123ya)
- * [Rohit Lakra](https://github.com/RohitLakra299)
- * [Siddharth Singh](https://github.com/sekocoder)
+ * [Adarsh Pandey](https://github.com/addy0110) : Intro screen, Sign in, Register, Home page for NGO and restaurant
+ * [Ananya Mishra](https://github.com/Anan123ya) : Readme, Make a donation and Donation request page
+ * [Rohit Lakra](https://github.com/RohitLakra299) : Firebase (storing and retrieving of data), Donation list and Request list page
+ * [Siddharth Singh](https://github.com/sekocoder) : Profile page, Edit profile page, About page, Confirm request page
